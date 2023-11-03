@@ -3,10 +3,6 @@
     background-color: rgb(199, 191, 191);
     display: flex;
     flex-direction: row;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
     border: 3px solid black;
     margin-bottom: 20px;
   }
