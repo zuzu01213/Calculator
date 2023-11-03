@@ -12,10 +12,11 @@
     <header class="header">
         <p class="page">A Web Page</p>
         <div class="left-section">
-            <img class="left-arrow" src="images/left.png">
+            <a href="https://youtu.be/dQw4w9WgXcQ">
+            <img class="left-arrow" src="images/left.png"></a>
             <img class="right-arrow" src="images/right.png">
             <img class="cross" src="images/cross.png">
-            <img class="home-img" src="images/home.png">
+            <img class="home-img" src="images/home.png">     
         </div>
         <div class="middle-section">
             <input class="search-bar" type="text" placeholder="https://localhost">

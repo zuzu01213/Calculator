@@ -37,7 +37,7 @@ img{
   width: 300px;
   box-shadow: 2px 2px;
   margin: 20px;
-  margin-left: 40px;
+  margin-left: 45px;
   background-color: gray;
   font-weight: bold;
   
@@ -68,15 +68,7 @@ input {
   font-weight: lighter;
 }
 
-@media (max-width: 750px) {
-  div {
-    grid-template-columns: 1fr 1fr;
-  }
+.hasil-button:not([disabled]):active {
+  box-shadow: black 2px 2px 0 0, gray 2px 2px 0 1px;
+  transform: translate(2px, 2px);
 }
-
-@media (min-width: 751px) and (max-width: 999px) {
-  div {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
