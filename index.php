@@ -105,14 +105,14 @@
                 <p class="card-text">Angka Kedua</p>
                 <input type="number" name="angka8" placeholder="Masukan Angka:">
                    <?php
-                   if (empty($_POST['angka1'])) {
+                   if (empty($_POST['angka7'])) {
                     echo "<p>Silakan masukkan angka yang valid.</p>";
                   } 
                   else {
                     $angka7 = $_POST['angka7'];
                     $angka8 = $_POST['angka8'];
-                    $hasil1 = $angka7 / $angka8;
-                    echo "<div class='hk'><p class='hk'>Hasil: <p> $hasil1</p></p></div>";
+                    $hasil4 = $angka7 / $angka8;
+                    echo "<div class='hk'><p class='hk'>Hasil: <p> $hasil4</p></p></div>";
                   }
                   ?>
             </div>
