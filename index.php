@@ -11,7 +11,6 @@
 <body>
     <header class="header">
         <p class="page">Simple Calculator</p>
-        <p>ada</p>
         <div class="left-section">
             <a href="https://youtu.be/dQw4w9WgXcQ">
             <img class="left-arrow" src="images/left.png"></a>
