@@ -35,17 +35,7 @@
                 <input type="number" name="angka1" placeholder="Masukan Angka:">
                 <p class="card-text">Angka Kedua</p>
                 <input type="number" name="angka2" placeholder="Masukan Angka:">
-                   <?php
-                   if (empty($_POST['angka1'])) {
-                    echo "<p>Silakan masukkan angka yang valid.</p>";
-                  } 
-                  else {
-                    $angka1 = $_POST['angka1'];
-                    $angka2 = $_POST['angka2'];
-                    $hasil1 = $angka1 + $angka2;
-                    echo "<div class='hk'><p class='hk'>Hasil: <p> $hasil1</p></p></div>";
-                  }
-                  ?>
+     
             </div>
             <button type="submit" name="hitung" class="hasil-button">Hitung</button>
         </form>
@@ -58,16 +48,7 @@
                 <input type="number" name="angka3" placeholder="Masukan Angka:">
                 <p class="card-text">Angka Kedua</p>
                 <input type="number" name="angka4" placeholder="Masukan Angka:">
-                   <?php
-                   if (empty($_POST['angka3'])) {
-                    echo "<p>Silakan masukkan angka yang valid.</p>";
-                  } else {
-                    $angka3 = $_POST['angka3'];
-                    $angka4 = $_POST['angka4'];
-                    $hasil2 = $angka3 - $angka4;
-                    echo "<div class='hk'><p class='hk'>Hasil: <p> $hasil2</p></p></div>";
-                  }
-                  ?>
+             
             </div>
             <button type="submit" name="hitung" class="hasil-button-2">Hitung</button>
         </form>
@@ -80,16 +61,7 @@
                 <input type="number" name="angka5" placeholder="Masukan Angka:">
                 <p class="card-text">Angka Kedua</p>
                 <input type="number" name="angka6" placeholder="Masukan Angka:">
-                   <?php
-                   if (empty($_POST['angka5'])) {
-                    echo "<p>Silakan masukkan angka yang valid.</p>";
-                  } else {
-                    $angka5 = $_POST['angka5'];
-                    $angka6 = $_POST['angka6'];
-                    $hasil3 = $angka5 * $angka6;
-                    echo "<div class='hk'><p class='hk'>Hasil: <p> $hasil3</p></p></div>";
-                  }
-                  ?>
+             
             </div>
             <button type="submit" name="hitung" class="hasil-button">Hitung</button>
         </form>
@@ -104,17 +76,7 @@
                 <input type="number" name="angka7" placeholder="Masukan Angka:">
                 <p class="card-text">Angka Kedua</p>
                 <input type="number" name="angka8" placeholder="Masukan Angka:">
-                   <?php
-                   if (empty($_POST['angka1'])) {
-                    echo "<p>Silakan masukkan angka yang valid.</p>";
-                  } 
-                  else {
-                    $angka7 = $_POST['angka7'];
-                    $angka8 = $_POST['angka8'];
-                    $hasil1 = $angka7 / $angka8;
-                    echo "<div class='hk'><p class='hk'>Hasil: <p> $hasil1</p></p></div>";
-                  }
-                  ?>
+            
             </div>
             <button type="submit" name="hitung" class="hasil-button">Hitung</button>
         </form>
@@ -127,16 +89,7 @@
                 <input type="number" name="angka9" placeholder="Masukan Angka:">
                 <p class="card-text">Angka Kedua</p>
                 <input type="number" name="angka10" placeholder="Masukan Angka:">
-                   <?php
-                   if (empty($_POST['angka9'])) {
-                    echo "<p>Silakan masukkan angka yang valid.</p>";
-                  } else {
-                    $angka9 = $_POST['angka9'];
-                    $angka10 = $_POST['angka10'];
-                    $hasil2 = $angka9 % $angka10;
-                    echo "<div class='hk'><p class='hk'>Hasil: <p> $hasil2</p></p></div>";
-                  }
-                  ?>
+                  
             </div>
             <button type="submit" name="hitung" class="hasil-button-2">Hitung</button>
         </form>
@@ -145,6 +98,7 @@
     <footer class="footer-container">
         <img class="strips-icon" src="images/strips.png">
     </footer>
+
 </body>
 </html>
 
