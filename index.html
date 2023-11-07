@@ -120,23 +120,18 @@
   function divide() {
     const angka7 = parseFloat(document.getElementsByName("angka7")[0].value);
     const angka8 = parseFloat(document.getElementsByName("angka8")[0].value);
-    if (angka8 === 0) {
-      alert("Angka kedua tidak boleh nol (0) untuk pembagian.");
-    } else {
-      const result = angka7 / angka8;
-      alert(`Hasil pembagian: ${result}`);
+    const result = angka7 / angka8;
+    alert(`Hasil pembagian: ${result}`);
+
     }
-  }
+  
 
   function calculateModulus() {
     const angka9 = parseInt(document.getElementsByName("angka9")[0].value);
     const angka10 = parseInt(document.getElementsByName("angka10")[0].value);
-    if (angka9 && angka10 === 0) {
-      alert("Angka kedua tidak boleh nol (0) untuk modulus.");
-    } else {
-      const result = angka9 % angka10;
-      alert(`Hasil modulus: ${result}`);
-    }
+    const result = angka9 % angka10;
+    alert(`Hasil modulus: ${result}`);
+    
   }
 
   document.querySelector(".hasil-button").addEventListener("click", add);
