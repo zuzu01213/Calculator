@@ -37,7 +37,7 @@
                 <input type="number" name="angka1" placeholder="Masukan Angka:">
                 <p class="card-text">Angka Kedua</p>
                 <input type="number" name="angka2" placeholder="Masukan Angka:">
-                <P>Hasil: 999999999999 </P>
+                <P id="hasil-1">Hasil:  </P>
             </div>
             <button type="submit" name="hitung" class="hasil-button">Hitung</button>  
         </div>
@@ -49,7 +49,7 @@
                     <input type="number" name="angka3" placeholder="Masukan Angka:">
                     <p class="card-text">Angka Kedua</p>
                     <input type="number" name="angka4" placeholder="Masukan Angka:">
-                    <P>Hasil: 999999999999</P>
+                    <P id="hasil-2">Hasil: </P>
                 </div>
                 <button type="submit" name="hitung" class="hasil-button-2">Hitung</button>
             </div>
@@ -61,7 +61,7 @@
                     <input type="number" name="angka5" placeholder="Masukan Angka:">
                     <p class="card-text">Angka Kedua</p>
                     <input type="number" name="angka6" placeholder="Masukan Angka:">
-                    <P>Hasil: 999999999999 </P>
+                    <P id="hasil-3">Hasil:  </P>
                 </div>
             <button type="submit" name="hitung" class="hasil-button-3">Hitung</button>
         </div>
@@ -73,7 +73,7 @@
                         <input type="number" name="angka7" placeholder="Masukan Angka:">
                         <p class="card-text">Angka Kedua</p>
                         <input type="number" name="angka8" placeholder="Masukan Angka:">
-                        <p>Hasil: 999999999999</p> 
+                        <p id="hasil-4">Hasil: </p> 
                     </div>
                 <button type="submit" name="hitung" class="hasil-button-4">Hitung</button>
             </div>
@@ -85,7 +85,7 @@
                         <input type="number" name="angka9" placeholder="Masukan Angka:">
                         <p class="card-text">Angka Kedua</p>
                         <input type="number" name="angka10" placeholder="Masukan Angka:"> 
-                        <P>Hasil: 999999999999 </P>
+                        <P id="hasil-5">Hasil:  </P>
                     </div>
                 <button type="submit" name="hitung" class="hasil-button-5">Hitung</button>
             </div>
@@ -96,50 +96,69 @@
     </footer>
 </body>
 <script>
-  function add() {
-    const angka1 = parseFloat(document.getElementsByName("angka1")[0].value);
-    const angka2 = parseFloat(document.getElementsByName("angka2")[0].value);
-    const result = angka1 + angka2;
-    alert (`Hasil penambahan: ${result}`);
-  }
+    $(document).ready(function () {
+        $(".hasil-button").click(function () {
+            const angka1 = parseFloat($("input[name='angka1']").val());
+            const angka2 = parseFloat($("input[name='angka2']").val());
 
-  function subtract() {
-    const angka3 = parseFloat(document.getElementsByName("angka3")[0].value);
-    const angka4 = parseFloat(document.getElementsByName("angka4")[0].value);
-    const result = angka3 - angka4;
-    alert(`Hasil pengurangan: ${result}`);
-  }
+            if (isNaN(angka1) || isNaN(angka2)) {
+                $("#hasil-1").text("Please enter valid numbers");
+            } else {
+                const result = angka1 + angka2;
+                $("#hasil-1").text(`Hasil Penambahan: ${result}`);
+            }
+        });
 
-  function multiply() {
-    const angka5 = parseFloat(document.getElementsByName("angka5")[0].value);
-    const angka6 = parseFloat(document.getElementsByName("angka6")[0].value);
-    const result = angka5 * angka6;
-    alert(`Hasil perkalian: ${result}`);
-  }
+        $(".hasil-button-2").click(function () {
+            const angka3 = parseFloat($("input[name='angka3']").val());
+            const angka4 = parseFloat($("input[name='angka4']").val());
 
-  function divide() {
-    const angka7 = parseFloat(document.getElementsByName("angka7")[0].value);
-    const angka8 = parseFloat(document.getElementsByName("angka8")[0].value);
-    const result = angka7 / angka8;
-    alert(`Hasil pembagian: ${result}`);
+            if (isNaN(angka3) || isNaN(angka4)) {
+                $("#hasil-2").text("Please enter valid numbers");
+            } else {
+                const result = angka3 - angka4;
+                $("#hasil-2").text(`Hasil Pengurangan: ${result}`);
+            }
+        });
 
-    }
-  
+        $(".hasil-button-3").click(function () {
+            const angka5 = parseFloat($("input[name='angka5']").val());
+            const angka6 = parseFloat($("input[name='angka6']").val());
 
-  function calculateModulus() {
-    const angka9 = parseInt(document.getElementsByName("angka9")[0].value);
-    const angka10 = parseInt(document.getElementsByName("angka10")[0].value);
-    const result = angka9 % angka10;
-    alert(`Hasil modulus: ${result}`);
-    
-  }
+            if (isNaN(angka5) || isNaN(angka6)) {
+                $("#hasil-3").text("Please enter valid numbers");
+            } else {
+                const result = angka5 * angka6;
+                $("#hasil-3").text(`Hasil Perkalian: ${result}`);
+            }
+        });
 
-  document.querySelector(".hasil-button").addEventListener("click", add);
-  document.querySelector(".hasil-button-2").addEventListener("click", subtract);
-  document.querySelector(".hasil-button-3").addEventListener("click", multiply);
-  document.querySelector(".hasil-button-4").addEventListener("click", divide);
-  document.querySelector(".hasil-button-5").addEventListener("click", calculateModulus);
+        $(".hasil-button-4").click(function () {
+            const angka7 = parseFloat($("input[name='angka7']").val());
+            const angka8 = parseFloat($("input[name='angka8']").val());
+
+            if (isNaN(angka7) || isNaN(angka8)) {
+                $("#hasil-4").text("Please enter valid numbers");
+            } else {
+                const result = angka7 / angka8;
+                $("#hasil-4").text(`Hasil Pembagian: ${result}`);
+            }
+        });
+
+        $(".hasil-button-5").click(function () {
+            const angka9 = parseInt($("input[name='angka9']").val());
+            const angka10 = parseInt($("input[name='angka10']").val());
+
+            if (isNaN(angka9) || isNaN(angka10)) {
+                $("#hasil-5").text("Please enter valid numbers");
+            } else {
+                const result = angka9 % angka10;
+                $("#hasil-5").text(`Hasil Modulus: ${result}`);
+            }
+        });
+    });
 </script>
+
 </html>
 
 
