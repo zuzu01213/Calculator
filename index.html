@@ -97,66 +97,39 @@
 </body>
 <script>
     $(document).ready(function () {
-        $(".hasil-button").click(function () {
-            const angka1 = parseFloat($("input[name='angka1']").val());
-            const angka2 = parseFloat($("input[name='angka2']").val());
+    function calculate(operation, input1, input2, resultId) {
+        const number1 = parseFloat($(`input[name='${input1}']`).val());
+        const number2 = parseFloat($(`input[name='${input2}']`).val());
 
-            if (isNaN(angka1) || isNaN(angka2)) {
-                $("#hasil-1").text("Please enter valid numbers");
-            } else {
-                const result = angka1 + angka2;
-                $("#hasil-1").text(`Hasil Penambahan: ${result}`);
-            }
-        });
+        if (isNaN(number1) || isNaN(number2)) {
+            $(`#${resultId}`).text("Please enter valid numbers");
+        } else {
+            const result = operation(number1, number2);
+            $(`#${resultId}`).text(`Hasil: ${result}`);
+        }
+    }
 
-        $(".hasil-button-2").click(function () {
-            const angka3 = parseFloat($("input[name='angka3']").val());
-            const angka4 = parseFloat($("input[name='angka4']").val());
-
-            if (isNaN(angka3) || isNaN(angka4)) {
-                $("#hasil-2").text("Please enter valid numbers");
-            } else {
-                const result = angka3 - angka4;
-                $("#hasil-2").text(`Hasil Pengurangan: ${result}`);
-            }
-        });
-
-        $(".hasil-button-3").click(function () {
-            const angka5 = parseFloat($("input[name='angka5']").val());
-            const angka6 = parseFloat($("input[name='angka6']").val());
-
-            if (isNaN(angka5) || isNaN(angka6)) {
-                $("#hasil-3").text("Please enter valid numbers");
-            } else {
-                const result = angka5 * angka6;
-                $("#hasil-3").text(`Hasil Perkalian: ${result}`);
-            }
-        });
-
-        $(".hasil-button-4").click(function () {
-            const angka7 = parseFloat($("input[name='angka7']").val());
-            const angka8 = parseFloat($("input[name='angka8']").val());
-
-            if (isNaN(angka7) || isNaN(angka8)) {
-                $("#hasil-4").text("Please enter valid numbers");
-            } else {
-                const result = angka7 / angka8;
-                $("#hasil-4").text(`Hasil Pembagian: ${result}`);
-            }
-        });
-
-        $(".hasil-button-5").click(function () {
-            const angka9 = parseInt($("input[name='angka9']").val());
-            const angka10 = parseInt($("input[name='angka10']").val());
-
-            if (isNaN(angka9) || isNaN(angka10)) {
-                $("#hasil-5").text("Please enter valid numbers");
-            } else {
-                const result = angka9 % angka10;
-                $("#hasil-5").text(`Hasil Modulus: ${result}`);
-            }
-        });
+    $(".hasil-button").click(function () {
+        calculate((a, b) => a + b, 'angka1', 'angka2', 'hasil-1');
     });
+
+    $(".hasil-button-2").click(function () {
+        calculate((a, b) => a - b, 'angka3', 'angka4', 'hasil-2');
+    });
+
+    $(".hasil-button-3").click(function () {
+        calculate((a, b) => a * b, 'angka5', 'angka6', 'hasil-3');
+    });
+
+    $(".hasil-button-4").click(function () {
+        calculate((a, b) => a / b, 'angka7', 'angka8', 'hasil-4');
+    });
+
+    $(".hasil-button-5").click(function () {
+        calculate((a, b) => a % b, 'angka9', 'angka10', 'hasil-5');
+    });
+});
+
 </script>
 
 </html>
